@@ -12,7 +12,7 @@ const VideoPlayer = () => {
  return (
    <Video 
     // Can be a URL or a local file.
-    source={{ uri: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4' }}
+    source={{ uri: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4' }}
     // Store reference
     // ref={videoRef}
     style={styles.backgroundVideo}
