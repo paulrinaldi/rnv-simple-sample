@@ -1,4 +1,7 @@
 {
   "name": "test10",
-  "displayName": "test10"
+  "displayName": "test10",
+  "plugins": [
+    "expo-build-properties"
+  ]
 }
