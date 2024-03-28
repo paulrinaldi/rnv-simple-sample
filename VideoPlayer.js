@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { StyleSheet } from 'react-native';
-import Video from 'react-native-video';
+import Video, { TextTrackType } from 'react-native-video';
  
 // Within your render function, assuming you have a file called
 // "background.mp4" in your project. You can include multiple videos
@@ -11,6 +11,20 @@ const VideoPlayer = () => {
  
  return (
    <Video 
+    textTracks={[
+      {
+        title: "English CC",
+        language: "en",
+        type: TextTrackType.VTT, // "text/vtt"
+        uri: "https://bitdash-a.akamaihd.net/content/sintel/subtitles/subtitles_en.vtt"
+      },
+      {
+        title: "Spanish Subtitles",
+        language: "es",
+        type: TextTrackType.SRT, // "application/x-subrip"
+        uri: "https://durian.blender.org/wp-content/content/subtitles/sintel_es.srt"
+      }
+    ]}
     // Can be a URL or a local file.
     source={{ uri: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4' }}
     // Store reference
